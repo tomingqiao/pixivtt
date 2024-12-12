@@ -177,6 +177,7 @@ async function _buildImageResponse(imageUrl) {
 }
 
 async function handleRequest(request) {
+    credentials.refresh_token = REFRESH_TOKEN;
     const checkRequest = _checkRequest(request);
 
     if (!checkRequest.is_valid) {
